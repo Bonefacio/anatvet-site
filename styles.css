@@ -24,6 +24,7 @@ a:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; border-ra
 .notice { padding: 16px 20px; border-left: 4px solid var(--link); border-radius: 0 8px 8px 0; background: var(--notice); color: var(--text); }
 .contents { padding: 14px 0 20px; border-bottom: 1px solid var(--border); }
 .contents ul { display: flex; flex-wrap: wrap; gap: 6px 20px; list-style: none; padding: 0; margin: 8px 0 0; }
+.contents li { margin: 0; }
 section { scroll-margin-top: 20px; }
 footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
 @media (prefers-color-scheme: dark) {
