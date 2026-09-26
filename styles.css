@@ -1,0 +1,38 @@
+:root {
+  color-scheme: light dark;
+  --page: #f2f6f6; --surface: #ffffff; --text: #182e35;
+  --muted: #465e66; --link: #08685b; --border: #d3dfdf; --notice: #edf7f3;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; padding: clamp(12px, 3vw, 32px); background: var(--page); color: var(--text); font: 1rem/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+main { max-width: 900px; margin: 0 auto; padding: clamp(20px, 5vw, 44px); background: var(--surface); border: 1px solid var(--border); border-radius: 18px; }
+h1 { margin: 16px 0 8px; font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.2; letter-spacing: -.025em; }
+h2 { margin: 32px 0 10px; font-size: 1.3rem; line-height: 1.4; }
+h3 { margin: 20px 0 8px; font-size: 1.05rem; }
+p, li { color: var(--muted); }
+p { margin: 12px 0; }
+ul { padding-left: 24px; }
+li + li { margin-top: 4px; }
+a { color: var(--link); text-decoration: underline; text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--link); outline-offset: 4px; border-radius: 2px; }
+.languages { font-size: .95rem; }
+.languages a { padding: 4px 0; }
+.languages a[aria-current="page"] { font-weight: 750; }
+.meta { margin-top: 10px; font-size: .95rem; }
+.notice { padding: 16px 20px; border-left: 4px solid var(--link); border-radius: 0 8px 8px 0; background: var(--notice); color: var(--text); }
+.contents { padding: 14px 0 20px; border-bottom: 1px solid var(--border); }
+.contents ul { display: flex; flex-wrap: wrap; gap: 6px 20px; list-style: none; padding: 0; margin: 8px 0 0; }
+section { scroll-margin-top: 20px; }
+footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--muted); font-size: .9rem; }
+@media (prefers-color-scheme: dark) {
+  :root { --page: #101b20; --surface: #17272d; --text: #eff7f7; --muted: #c3d4d9; --link: #7de3d2; --border: #344953; --notice: #203b37; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  :root { --page: #fff; --surface: #fff; --text: #000; --muted: #222; --link: #000; --border: #aaa; --notice: #fff; }
+  body, main { padding: 0; border: 0; }
+  .contents { display: none; }
+  h2, h3 { break-after: avoid; }
+}
